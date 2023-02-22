@@ -1,0 +1,317 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+#top-nav{
+    width: 100%;
+    height: 8vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    color: white;
+    font-weight: 100;
+    font-size: 110%;
+    line-height: 5px;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+#above-nav{
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(230, 228, 228);
+}
+#nav{
+    width: 94%;
+    height: 8vh;
+    padding: 10px 3%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav > a:nth-child(1):hover{
+    border: none;
+}
+#nav >a> h1{
+    font-size: 250%;
+}
+#nav > form{
+    width: 45%;
+    /* border: 1px solid green; */
+    align-items: center;
+    padding: 5px;
+}
+#nav > form> #search{
+    width: 80%;
+    height: 5vh;
+    margin-right: 5px;
+    background-color: rgb(230, 228, 228);
+    border: none;
+
+}
+#nav > form> #submit{
+    width: 15%;
+    height: 5vh;
+    padding: 8px 5px 8px 5px;
+    /* font-size: 120%; */
+    background-color: rgb(230, 228, 228);
+    border: none;
+
+}
+#nav > select{
+    height: 6vh;
+    width: 8%;
+    border: none;
+}
+#nav > select:hover{
+    border-bottom: 5px solid black;
+}
+/* #nav > select{
+
+} */
+#nav > select > option{
+    width: 13%;
+    height: 5vh;
+}
+#nav > a{
+    /* height: 7vh; */
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    width: 8%;
+    text-align: center;
+    /* padding-bottom: 3vh; */
+}
+#nav > a:hover{
+    border-bottom: 5px solid black;
+    width: 8%;
+}
+#catagory{
+    width: 100%;
+    height: 6vh;
+    text-align: center;
+    border-top: 2px solid  rgb(230, 228, 228);
+    border-bottom: 2px solid  rgb(230, 228, 228);
+}
+#catagory > div{
+    margin: auto;
+    margin-top: 10px;
+    justify-content: space-around;
+    /* border: 1px solid/ black; */
+    width: 60%;
+}
+#catagory > div >a{
+    padding-left: 2%;
+    padding-right: 2%;
+    text-decoration: none;
+    color: black;
+}
+#catagory > div >a:hover{
+    border-bottom: 5px solid black;
+    padding-bottom: 5px;
+    text-align: center;
+}
+#offer{
+    width: 100%;
+    height: 15vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+#offer > div{
+    display: flex;
+    padding-left: 10px;
+    border: 1px solid rgb(230, 228, 228);
+}
+#offer > div:hover{
+    background-color: rgb(230, 228, 228);
+}
+#offer > div > div:nth-child(1){
+    width: 13%;
+    height: 60%;
+    /* border: 1px solid green; */
+    margin-top: 3vh;
+    text-align: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: black;
+    color: white;
+    font-size: 150%;
+    font-weight: 200;
+}
+#offer > div > div:nth-child(2){
+    line-height: 15px;
+}
+#offer > div > #round{
+    background-color: rgb(192, 38, 69);
+    border-radius: 50%;
+    /* padding: 10px; */
+    /* align-items: center; */
+}
+#offer > div > #dele{
+    background-color: rgb(192, 38, 69);
+    border-radius: 50%;
+}
+#poster{
+    margin-top: 2px;
+    width: 95%;
+    height: 50vh;
+    background-image: url("https://images.dsw.com/is/image/DSWShoes/P230153_ft_tier?impolicy=qlt-medium&imwidth=1400&imdensity=2");
+    background-size: 90%;
+    padding-left: 5%;
+    border: 1px solid black;
+}
+#poster > h1{
+    font-size: 300%;
+    color: white;
+}
+#poster > p{
+    color: white;
+    line-height: 10px;
+    font-weight: 200;
+    font-size: 130%;
+}
+#poster > button{
+    width: 10%;
+    font-weight: bolder;
+    height: 5vh;
+    margin-top: 10px;
+}
+#cat{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#cat > div{
+    margin-top: 20px;
+    width: 15%;
+}
+#cat > div:hover{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+#cat > div >img{
+    width: 100%;
+}
+#spring-head{
+    text-align: center;
+}
+#spring{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#spring > div{
+    width: 23%;
+    margin-right: 10px;
+}
+#spring > div > img{
+    width: 100%;
+}
+#poster-2{
+    margin-top: 2px;
+    width: 95%;
+    height: 50vh;
+    background-image: url("https://images.dsw.com/is/image/DSWShoes/P230088_ft_birken-html.jpg?impolicy=qlt-medium&imwidth=1400&imdensity=1");
+    background-size: 90%;
+    /* padding-left: 5%; */
+    border: 1px dashed black;
+    text-align: right;
+    padding-right: 5%;
+    padding-top: 5vh;
+}
+#poster-2 > button{
+    width: 10%;
+    height: 5vh;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+/* #Clearance-sale{
+
+    width: 95%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#Claearance-sale > div{
+    width: 18%;
+    margin-right: 10px;
+}
+#Claearance-sale > div > img{
+    width: 100%;
+} */
+#bg-poster{
+    width: 100%;
+    height: 25vh;
+    margin-top: 10px;
+    padding-top: 1vh;
+    color: white;
+    background-color: #EF9A9A   ;
+    text-align: center;
+}
+#bg-poster > button{
+    background-color: white;
+    width: 30%;
+    height: 6vh;
+    color: black;
+    font-weight: bold;
+}
+#haves-man-head{
+    text-align: center;
+}
+#haves-man{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#haves-man > div{
+    width: 23%;
+    margin-right: 10px;
+}
+#haves-man > div > img{
+    width: 100%;
+}
+#slide{
+    width: 100%;
+    border: 1px dashed black;
+}
+#slide > img{
+    width: 100%;
+}
+#container{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    border: 1px solid black;
+}
+#container > div{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+    line-height: 50%;
+}
+#container > div > img{
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+#container > div > .addTofavorite{
+    background-color: red;
+    border: none;
+    /* background-color: transparent; */
+}
+#container > div > button:nth-child(2){
+    margin: auto;
+    text-align: center;
+    margin-left: 50%;
+}
