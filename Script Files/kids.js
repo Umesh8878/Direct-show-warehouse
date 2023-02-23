@@ -19,6 +19,9 @@ let searchform = document.querySelector("form");
         appendata(filtered)
    });
 
+   let cartArr = JSON.parse(localStorage.getItem("cart")) || [];
+   let favArr = JSON.parse(localStorage.getItem("fav")) || [];
+
 appendata(lsdata);
 function appendata(data){
     container.innerHTML= "";
@@ -38,15 +41,52 @@ function appendata(data){
             price.textContent = "$ "+data[i].price;
 
             let addTofavorite = document.createElement("button");
-            addTofavorite.textContent = "🤍";
+            addTofavorite.textContent = "Add to Favourite";
+                addTofavorite.addEventListener("click",function(){
+                    if(checkanoDuplicate(data[i])){
+                        alert("Product is Already there");
+                    }
+                    else{
+                        favArr.push(data[i])
+                        localStorage.setItem("fav",JSON.stringify(favArr))
+                        alert("Product Added to Favourite");
+                    }
+                })
 
             let addToCart = document.createElement("button");
             addToCart.textContent = "Add to Cart";
-            
-            card.append(img,name,addTofavorite,price,addToCart)
+                addToCart.addEventListener("click",function(){
+                    if(checkDuplicate(data[i])){
+                        alert("Product Already in Cart");
+                    }
+                    else{
+                        cartArr.push({...data[i],quantity : 1})
+                        localStorage.setItem("cart",JSON.stringify(cartArr))
+                        alert("Product Added to Cart");
+                    }
+                })
+            card.append(img,name,price,addTofavorite,addToCart)
             container.append(card);
         }
     }
+}
+
+function checkDuplicate(ele){
+    for(let i=0; i<cartArr.length; i++){
+        if(cartArr[i].id === ele.id){
+            return true;
+        }
+    }
+    return false;
+}
+
+function checkanoDuplicate(ele){
+    for(let i=0; i<favArr.length; i++){
+        if(favArr[i].id === ele.id){
+            return true;
+        }
+    }
+    return false;
 }
 
 let filtersel = document.getElementById("filter");

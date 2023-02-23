@@ -137,12 +137,20 @@ h1{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
-#container > div > button :first-child{
-    border: none;
-    background-color: transparent;
-}
-#container > div > button:nth-child(2){
+#container > div > button{
+    width: 70%;
     margin: auto;
-    text-align: center;
-    margin-left: 50%;
+    display: block;
+    align-items: center;
+    height: 30px;
+    margin-top: 3px;
+    color: black;
+    font-weight: 150%;
+    background-color: rgb(200, 197, 197);
+    border: none;
+}
+
+#container > div > button:hover{
+    background-color: black;
+    color: white;
 }

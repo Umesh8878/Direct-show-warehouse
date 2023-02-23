@@ -4,7 +4,7 @@ body{
 }
 #top-nav{
     width: 100%;
-    height: 8vh;
+    /* height: 8vh; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: black;
     color: white;
@@ -31,6 +31,7 @@ body{
 }
 #nav > a:nth-child(1):hover{
     border: none;
+    margin-top: none;
 }
 #nav >a> h1{
     font-size: 250%;
@@ -59,7 +60,7 @@ body{
 
 }
 #nav > select{
-    height: 6vh;
+    /* height: 6vh; */
     width: 8%;
     border: none;
 }
@@ -74,7 +75,8 @@ body{
     height: 5vh;
 }
 #nav > a{
-    /* height: 7vh; */
+    /* padding-top: 10px; */
+    /* height: 5vh; */
     align-items: center;
     text-decoration: none;
     color: black;
@@ -113,7 +115,7 @@ body{
 }
 #offer{
     width: 100%;
-    height: 15vh;
+    /* height: 15vh; */
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
@@ -305,13 +307,70 @@ body{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
-#container > div > .addTofavorite{
+/* #container > div > .addTofavorite{
     background-color: red;
     border: none;
-    /* background-color: transparent; */
+    background-color: transparent;
+} */ 
+#container > div > button{
+    width: 70%;
+    margin: auto;
+    display: block;
+    align-items: center;
+    height: 30px;
+    margin-top: 3px;
+    color: black;
+    font-weight: 150%;
+    background-color: rgb(200, 197, 197);
+    border: none;
 }
-#container > div > button:nth-child(2){
+
+#container > div > button:hover{
+    background-color: black;
+    color: white;
+}
+/* #container > div > button:nth-child(2){
     margin: auto;
     text-align: center;
     margin-left: 50%;
+} */
+#footer{
+    width: 90%;
+    margin-top: 10vh;
+    padding: 5%;
+    display: flex;
+    background-color: rgb(241, 240, 240);
+    /* border: 1px solid red; */
+}
+#footer > #table{
+    width: 60%;
+    /* border: 1px solid black; */
+}
+#footer > #table > thead > tr > th{
+    padding: 5px 10px;
+}
+#footer > #logo{
+    width: 35%;
+    padding: 2%;
+    /* border: 1px solid black; */
+    /* display: flex; */
+}
+#footer > #logo > button{
+    width: 30%;
+    height: 10%;
+    border: none;
+    font-weight: bold;
+    background-color: orangered;
+    color: black;
+}
+#footer > #logo > button >a{
+    text-decoration: none;
+}
+#footer > #logo > #img{
+    width: 100%;
+    display: flex;
+}
+#footer > #logo > #img > img{
+    width: 100%;
+    margin-right: 10px;
 }

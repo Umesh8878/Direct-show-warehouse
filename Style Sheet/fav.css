@@ -1,0 +1,78 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+#nav{
+    width: 94%;
+    height: 8vh;
+    padding: 10px 3%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    background-color: rgb(200, 197, 197);
+
+    /* justify-content: space-between; */
+}
+#nav > a{
+    text-decoration: none;
+    background-color: white;
+    width: 8%;
+    border-radius: 5px;
+    text-align: center;
+    height: 30px;
+}
+#nav > h1{
+    margin-left: 10%;
+    font-size: 250%;
+}
+#main{
+    width: 100%;
+    display: flex;
+}
+#box{
+    margin: 8% 5% 0 10%;
+    width: 20%;
+    height: 50vh;
+    border: 1px solid black;
+}
+#wish{
+    background-color: antiquewhite;
+    text-align: center;
+}
+#container{
+    width: 95%;
+    margin: auto;
+    margin-left: 20px;
+    float: left;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    border: 1px solid black;
+}
+h1{
+    text-align: center;
+    /* background-color: bisque; */
+    border: none;
+}
+#container > div{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+    line-height: 50%;
+}
+#container > div > img{
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+#container > div > button{
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: rgb(200, 197, 197);
+    border: none;
+
+}
+#container > div > button:hover{
+    background-color: black;
+    color: white;
+}

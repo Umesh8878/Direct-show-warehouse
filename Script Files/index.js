@@ -697,6 +697,10 @@ let data = [
         Display(filtered)
    });
 
+   let cartArr = JSON.parse(localStorage.getItem("cart")) || [];
+   let favArr = JSON.parse(localStorage.getItem("fav")) || [];
+
+
    Display(data)
    function Display(data){
     container.innerHTML= "";
@@ -713,15 +717,54 @@ let data = [
         price.textContent = "$ "+ele.price;
 
         let addTofavorite = document.createElement("button");
-        addTofavorite.textContent = "🤍";
+        addTofavorite.textContent = "Add to Favourite";
+        addTofavorite.addEventListener("click",function(){
+            if(checkanoDuplicate(ele)){
+                alert("Product is Already there");
+            }
+            else{
+                favArr.push(ele)
+                localStorage.setItem("fav",JSON.stringify(favArr))
+                alert("Product Added to Favourite");
+            }
+        })
 
         let addToCart = document.createElement("button");
         addToCart.textContent = "Add to Cart";
+            addToCart.addEventListener("click",function(){
+                if(checkDuplicate(ele)){
+                    alert("Product Already in Cart");
+                }
+                else{
+                    cartArr.push({...ele,quantity : 1})
+                    localStorage.setItem("cart",JSON.stringify(cartArr))
+                    alert("Product Added to Cart");
+                }
+            })
+
         
-        card.append(img,name,addTofavorite,price,addToCart)
+        card.append(img,name,price,addTofavorite,addToCart)
         container.append(card);
     })
    }
+
+   function checkDuplicate(ele){
+        for(let i=0; i<cartArr.length; i++){
+            if(cartArr[i].id === ele.id){
+                return true;
+            }
+        }
+        return false;
+   }
+
+    function checkanoDuplicate(ele){
+        for(let i=0; i<favArr.length; i++){
+            if(favArr[i].id === ele.id){
+                return true;
+            }
+        }
+        return false;
+    }
 
    let filtersel = document.getElementById("filter");
    filtersel.addEventListener("change",function(){
