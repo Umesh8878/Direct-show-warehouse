@@ -29,6 +29,10 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+#nav > a:nth-child(1){
+    background-color: transparent;
+    padding: none;
+}
 #nav > a:nth-child(1):hover{
     border: none;
 }
@@ -60,9 +64,10 @@ body{
 
 }
 #nav > select{
-    height: 6vh;
+    /* height: 6vh; */
     width: 8%;
-    border: none;
+    border: 1px solid rgb(230, 228, 228) ;
+    padding: 5px;
 }
 #nav > select:hover{
     border-bottom: 5px solid black;
@@ -72,7 +77,9 @@ body{
 } */
 #nav > select > option{
     width: 13%;
-    height: 5vh;
+    /* height: 5vh; */
+    padding: 5px;
+    border: 1px solid rgb(230, 228, 228);
 }
 #nav > a{
     /* height: 7vh; */
@@ -81,6 +88,8 @@ body{
     color: black;
     width: 8%;
     text-align: center;
+    padding: 5px;
+    background-color: rgb(230, 228, 228);
     /* padding-bottom: 3vh; */
 }
 #nav > a:hover{

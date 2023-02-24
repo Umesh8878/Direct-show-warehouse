@@ -6,12 +6,9 @@ body{
     width: 94%;
     height: 8vh;
     padding: 10px 3%;
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
-    background-color: rgb(200, 197, 197);
-
-    /* justify-content: space-between; */
+    background-color: rgb(230, 228, 228);
 }
 #nav > a{
     text-decoration: none;
@@ -19,7 +16,8 @@ body{
     width: 8%;
     border-radius: 5px;
     text-align: center;
-    height: 30px;
+    padding: 5px;
+    color: black;
 }
 #nav > h1{
     margin-left: 10%;
@@ -49,7 +47,6 @@ body{
 }
 #container{
     width: 60%;
-    /* margin: auto; */
     margin-left: 20px;
     float: left;
     display: grid;
@@ -60,7 +57,6 @@ body{
 }
 h1{
     text-align: center;
-    /* background-color: bisque; */
     border: none;
 }
 #container > div{

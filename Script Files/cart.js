@@ -50,7 +50,7 @@ function Display(data){
     for(let i=0; i<cart.length; i++){
         sum+=cart[i].price*cart[i].quantity;
     }
-    total.textContent = "Subtotal          = "+sum;
+    total.textContent = "Subtotal = $ "+sum;
 
     btn = document.createElement("button");
     btn.textContent = "Checkout"

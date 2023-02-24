@@ -6,12 +6,9 @@ body{
     width: 94%;
     height: 8vh;
     padding: 10px 3%;
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
-    background-color: rgb(200, 197, 197);
-
-    /* justify-content: space-between; */
+    background-color: rgb(230, 228, 228);
 }
 #nav > a{
     text-decoration: none;
@@ -19,7 +16,8 @@ body{
     width: 8%;
     border-radius: 5px;
     text-align: center;
-    height: 30px;
+    color: black;
+    padding: 5px;
 }
 #nav > h1{
     margin-left: 10%;
@@ -52,7 +50,6 @@ body{
 }
 h1{
     text-align: center;
-    /* background-color: bisque; */
     border: none;
 }
 #container > div{
@@ -63,7 +60,6 @@ h1{
 #container > div > img{
     width: 100%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
 }
 #container > div > button{
     margin-right: 5px;
