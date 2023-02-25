@@ -5,46 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in Page</title>
+    <style>
+      body{
+            margin: 0%;
+            padding: 0%;
+            width: 100%;
+        }
+        #box{
+            margin: auto;
+            width: 30%;
+            align-items: center;
+            margin-top: 20vh;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        #box > form > input{
+            margin-top: 20px;
+            padding: 10px;
+            width: 80%;
+        }
+        #box > form > #submit{
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgb(0, 98, 255);
+            color: white;
+            border: none;
+        }
+    </style>
   </head>
   <body>
-    <div class="nav">
+    <!-- <div class="nav">
       <a href="./index.html">Signup</a>
       <a href="./signin.html">Signin</a>
-    </div>
-    <div id="signin">
+    </div> -->
+    <div id="box">
       <h1 id="heading">Please Enter Your Details</h1>
       <form>
-        <input type="email" id="email" placeholder="email" />
-        <input type="password" id="password" placeholder="password"/>
-        <input type="submit" value="Submit" />
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email" />
+        <input type="password" id="password" placeholder="Password"/>
+        <input type="submit" value="Submit" id="submit"/>
       </form>
     </div>
   </body>
   <script>
-        let AllFormData = JSON.parse(localStorage.getItem("account-data"));
-        console.log(AllFormData);
+        let formEl = document.querySelector("form");
+        let nameEl = document.getElementById("name");
         let emailEl = document.getElementById("email");
         let passwordEl = document.getElementById("password");
-        // let heading = document.getElementById("heading");
 
-        let formEl = document.querySelector("form");
-        formEl.addEventListener("submit",function(e){
-          e.preventDefault();
-          for(let i=0; i<AllFormData.length; i++){
-            if(emailEl.value===AllFormData[i].email){
-              if(passwordEl.value===AllFormData[i].password){
-                heading.innerText = "Sign in Successful";
-              }
-              else{
-                heading.innerText = "Wrong Credentials";
-              }
-            }
-            else{
-              heading.innerText = "Wrong Credentials";
-            }
-            
-          }
-        })
+   let AllFormData = JSON.parse(localStorage.getItem("account-data"));
+   if (AllFormData === null) {
+      AllFormData = [];
+    }
+   formEl.addEventListener("submit",function(e){
+    e.preventDefault();
+      let FormData ={
+        name: nameEl.value,
+        email: emailEl.value,
+        password: passwordEl.value,
+      }
+
+      AllFormData.push(FormData);
+      localStorage.setItem("account-data", JSON.stringify(AllFormData));
+      setTimeout(()=>{
+        location.replace("login.html");
+      },2000);
+   })
 
   </script>
 </html>

@@ -3,8 +3,15 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let box = document.getElementById("box")
 function Display(data){
     let total = document.createElement("h3");
+    box.innerHTML = "";
+    let cardo = document.createElement("div")
     container.innerHTML = "";
+    let h1 = "Your cart is empty"
+    if(cart.length===0){
+        container.textContent = h1;
+    }
     cart.forEach(element => {
+        
         let card = document.createElement("div");
 
         let img = document.createElement("img");
@@ -43,17 +50,21 @@ function Display(data){
                 localStorage.setItem("cart",JSON.stringify(cart));
                 Display();
             });
-        card.append(img,name,price,incr,qnty,decr,removebtn)
+        card.append(img,name,price,decr,qnty,incr,removebtn)
         container.append(card);
     })
     let sum = 0;
     for(let i=0; i<cart.length; i++){
         sum+=cart[i].price*cart[i].quantity;
     }
+    heading = document.createElement("h1");
+    heading.textContent = "Order Summary"
     total.textContent = "Subtotal = $ "+sum;
 
-    btn = document.createElement("button");
-    btn.textContent = "Checkout"
-    box.append(total,btn);
+    // btn = document.createElement("button");
+    // btn.setAttribute("href",checkout.html)
+    // btn.textContent = "Checkout"
+    cardo.append(heading,total);
+    box.append(cardo)
 }
 Display();

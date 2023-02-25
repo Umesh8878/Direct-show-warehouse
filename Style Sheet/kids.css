@@ -43,13 +43,13 @@ body{
 }
 #nav > form{
     width: 45%;
-    /* border: 1px solid green; */
+    padding: 10px;
     align-items: center;
     padding: 5px;
 }
 #nav > form> #search{
-    width: 80%;
-    height: 5vh;
+    width: 75%;
+    padding: 10px;
     margin-right: 5px;
     background-color: rgb(230, 228, 228);
     border: none;
@@ -57,17 +57,13 @@ body{
 }
 #nav > form> #submit{
     width: 15%;
-    height: 5vh;
-    padding: 8px 5px 8px 5px;
-    /* font-size: 120%; */
+    padding: 10px;
     background-color: rgb(230, 228, 228);
     border: none;
 
 }
 #nav > select{
-    /* height: 6vh; */
     width: 8%;
-    /* border: none; */
     border: 1px solid rgb(230, 228, 228);
     padding: 5px;
 
@@ -75,15 +71,11 @@ body{
 #nav > select:hover{
     border-bottom: 5px solid black;
 }
-/* #nav > select{
-
-} */
 #nav > select > option{
     width: 13%;
     height: 5vh;
 }
 #nav > a{
-    /* height: 7vh; */
     align-items: center;
     text-decoration: none;
     color: black;
