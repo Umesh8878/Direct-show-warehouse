@@ -4,6 +4,10 @@ let fav = JSON.parse(localStorage.getItem("fav")) || [];
 function Display(data){
     // let total = document.createElement("h3");
     container.innerHTML = "";
+    let h1 = "Your wishlist is empty"
+    if(fav.length===0){
+        container.textContent = h1;
+    }
     fav.forEach(element => {
         let card = document.createElement("div");
 

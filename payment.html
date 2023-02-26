@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout page</title>
+    <title>DSW payment</title>
     <style>
         body{
             margin: 0%;
@@ -15,7 +15,7 @@
             margin: auto;
             width: 30%;
             align-items: center;
-            margin-top: 20vh;
+            margin-top: 10vh;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             padding: 20px;
             text-align: center;
@@ -36,13 +36,23 @@
 </head>
 <body>
     <div id="box">
-        <h1>CHECKOUT</h1>
-        <input type="text" id="name" placeholder="Name" required/><br>
-        <input type="number" id="number" placeholder="Mob. Number" required/><br>
-        <input type="text" id="address" placeholder="Address" required/><br>
-        <button id="place-order" onclick="submit()">Proceed to Payment</button><br>
+        <h1>Payment Section</h1>
+        <input type="number" placeholder="Enter 16 digit card number"><br>
+        <input type="text" placeholder="Enter name on card"><br>
+        <input type="month" placeholder="Enter Expiry Date"><br>
+        <input type="password" placeholder="Enter CVV"><br>
+        <button id="place-order" onclick="submit()">Place Order</button><br>
         <h3 id="order-message"></h3>
     </div>
 </body>
-<script src="./Script Files/checkout.js"></script>
+<script>
+    function submit(){
+    let orderConfirm = document.getElementById("order-message");
+    orderConfirm.textContent = "Order Placed Successfully";
+    localStorage.clear();
+    setTimeout(()=>{
+        location.replace("index.html");
+    },3000);
+    }
+</script>
 </html>

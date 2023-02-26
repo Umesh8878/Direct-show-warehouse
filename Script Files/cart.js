@@ -1,6 +1,9 @@
 let container = document.getElementById("container");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let box = document.getElementById("box")
+let checkout = document.getElementById("checkout");
+
+
 function Display(data){
     let total = document.createElement("h3");
     box.innerHTML = "";
@@ -60,7 +63,10 @@ function Display(data){
     heading = document.createElement("h1");
     heading.textContent = "Order Summary"
     total.textContent = "Subtotal = $ "+sum;
-
+    
+    // if(sum===0){
+    //     checkout.innerText === "";
+    // }
     // btn = document.createElement("button");
     // btn.setAttribute("href",checkout.html)
     // btn.textContent = "Checkout"

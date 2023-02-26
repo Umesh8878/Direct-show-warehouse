@@ -786,36 +786,3 @@ let data = [
             Display(filtered)
         }
    })
-
-
-
-
-//    let hrEl = document.getElementById("hr");
-//     let minEl = document.getElementById("min");
-//     let secEl = document.getElementById("sec");
-//     let buttonstop = document.getElementById("stop");
-//     let buttonstart = document.getElementById("start");
-
-//     buttonstop.addEventListener("click", function(){
-//         clearInterval(interval);
-//     });
-
-    // buttonstart.addEventListener("click", function(){
-        // setInterval(function(){
-        //     sec++;
-        // if(sec===60){
-        //     sec = 0;
-        //     min++;
-        //     if(min===60){
-        //         min = 0;
-        //         hr++;
-        //         if(hr===24){
-        //             hr=0;
-        //         }
-        //         hrEl.innerText = hr;    
-        //     }
-        //     minEl.innerText = min;
-        // }
-        // secEl.innerText = sec;
-        // },0)
-    //})
