@@ -49,7 +49,7 @@
     function submit(){
     let orderConfirm = document.getElementById("order-message");
     orderConfirm.textContent = "Order Placed Successfully";
-    localStorage.clear();
+    localStorage.removeItem("cart");
     setTimeout(()=>{
         location.replace("index.html");
     },3000);
